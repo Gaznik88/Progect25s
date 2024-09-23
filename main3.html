@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style3.css">
+    <title>Выбор роли</title>
+    <style>
+        /* Добавляем стили для активной роли */
+        .role {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .role.active {
+            border: 2px solid #4CAF50; /* Зеленая рамка для выбранной роли */
+            box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Тень для выбранной роли */
+            background-color: rgba(76, 175, 80, 0.1); /* Легкий зеленый фон */
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-items">
+        <img src="./image/gr1.png" alt="Item" class="item1">
+        <img src="./image/gr2.png" alt="Item" class="item2">
+        <img src="./image/gr3.png" alt="Item" class="item3">
+        <img src="./image/gr4.png" alt="Item" class="item4">
+        <img src="./image/gr1.png" alt="Item" class="item5">
+    </div>
+    
+    <div class="container">
+        <div class="title">Выберите, кем хотите стать</div>
+        <div class="roles">
+            <div class="role" data-role="Игрок">
+                <img src="./image/Мышь.svg" alt="Игрок">
+                <span>Игрок</span>
+            </div>
+            <div class="role" data-role="Тренер">
+                <img src="./image/Тренер.svg" alt="Тренер">
+                <span>Тренер</span>
+            </div>
+            <div class="role" data-role="Организатор">
+                <img src="./image/Организатор.svg" alt="Организатор">
+                <span>Организатор</span>
+            </div>
+            <div class="role" data-role="Судья">
+                <img src="./image/Судья.svg" alt="Судья">
+                <span>Судья</span>
+            </div>
+            <div class="role" data-role="Аналитик">
+                <img src="./image/Аналитик.svg" alt="Аналитик">
+                <span>Аналитик</span>
+            </div>
+            <div class="role" data-role="Комментатор">
+                <img src="./image/Комментатор.svg" alt="Комментатор">
+                <span>Комментатор</span>
+            </div>
+        </div>
+        <button class="join-button">Присоединиться</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const roles = document.querySelectorAll('.role');
+            roles.forEach((role) => {
+                role.addEventListener('click', () => {
+                    roles.forEach((r) => r.classList.remove('active'));
+                    role.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

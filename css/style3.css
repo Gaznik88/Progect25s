@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0A0A43;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+.container {
+    text-align: center;
+}
+.title {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+.roles {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.role {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.role img {
+    width: 50px;
+    height: 50px;
+}
+.role span {
+    margin-top: 10px;
+}
+.join-button {
+    padding: 15px 30px;
+    background-color: #FF6154;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
+.floating-items img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+.item1 {
+    top: 10%;
+    left: 10%;
+}
+.item2 {
+    top: 20%;
+    right: 10%;
+}
+.item3 {
+    bottom: 20%;
+    left: 15%;
+}
+.item4 {
+    bottom: 10%;
+    right: 20%;
+}
+.item5 {
+    left: 5%;
+    bottom: 35%;
+}
+
+
+.roles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.role {
+    width: 120px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.role img {
+    max-width: 100%;
+    height: auto;
+}
+
+.role span {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.role.active {
+    border: 2px solid #4CAF50; 
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); 
+    background-color: rgba(76, 175, 80, 0.1); 
+}
+
+.join-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.join-button:hover {
+    background: #45a049;
+}
+
+@media (min-width: 1200px) {
+    .role {
+        width: 140px; 
+    }
+    .join-button {
+        font-size: 1.2em; 
+        padding: 20px 40px;
+    }
+}
+
+/* Средние экраны */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .container {
+        padding: 0 5%; 
+    }
+    .role {
+        width: 110px; 
+        padding: 8px;
+    }
+    .join-button {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+}
+
+/* Маленькие экраны */
+@media (max-width: 767px) {
+    .roles {
+        gap: 10px; 
+    }
+    .role {
+        width: 90px; 
+        padding: 6px;
+    }
+    .role span {
+        font-size: 12px; 
+    }
+    .join-button {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5em; 
+    }
+    .floating-items img {
+        width: 70px;
+        height: 70px; 
+        position: absolute;
+    }
+    .item1 {
+        top: 5%;
+        left: 5%;
+    }
+    .item2 {
+        top: 10%;
+        right: 5%;
+    }
+    .item3 {
+        bottom: 15%;
+        left: 10%;
+    }
+    .item4 {
+        bottom: 5%;
+        right: 10%;
+    }
+    .item5 {
+        left: 3%;
+        bottom: 25%;
+    }
+}
